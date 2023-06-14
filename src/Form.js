@@ -5,7 +5,8 @@ function Form() {
     const[formData, setFormData]=useState({
         firstName: '',
         lastName: '',
-        email: ""
+        email: "",
+        schoolName: ""
     })
     const [submitted, setSubmitted]= useState(false)
 
@@ -42,6 +43,13 @@ function Form() {
                 placeholder='Enter Email'
                 name='email'
                 value={formData.email}
+                onChange={handleChange}
+                required/>
+                <input 
+                type='text'
+                placeholder='school name'
+                name='school Name'
+                value={formData.schoolName}
                 onChange={handleChange}
                 required/>
              <button type="submit">Submit</button>
